@@ -1,0 +1,1116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Peran Keluarga dalam Menghadapi Diskriminasi terhadap Penyandang Disabilitas Intelektual</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --purple: #534AB7;
+    --purple-light: #EEEDFE;
+    --purple-mid: #AFA9EC;
+    --teal: #1D9E75;
+    --teal-light: #E1F5EE;
+    --amber: #BA7517;
+    --amber-light: #FAEEDA;
+    --coral: #D85A30;
+    --coral-light: #FAECE7;
+    --text: #1a1a1a;
+    --text-muted: #555;
+    --text-faint: #888;
+    --border: rgba(0,0,0,0.1);
+    --bg: #faf9f7;
+    --white: #ffffff;
+    --card-shadow: 0 1px 3px rgba(0,0,0,0.07), 0 4px 16px rgba(0,0,0,0.04);
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; }
+
+  .hero {
+    position: relative; background: var(--purple); overflow: hidden;
+    padding: 5rem 2rem 4rem; text-align: center;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, #7F77DD 0%, transparent 70%),
+                radial-gradient(ellipse 60% 80% at 100% 100%, #1D9E75 0%, transparent 60%);
+    opacity: 0.4;
+  }
+  .hero-inner { position: relative; max-width: 720px; margin: 0 auto; }
+  .hero-tag {
+    display: inline-block; background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.9);
+    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+    padding: 5px 14px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.2);
+    margin-bottom: 1.25rem; font-weight: 500;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(26px, 5vw, 46px); font-weight: 700;
+    color: #fff; line-height: 1.25; margin-bottom: 1.25rem;
+  }
+  .hero p { font-size: 16px; color: rgba(255,255,255,0.82); max-width: 540px; margin: 0 auto 2rem; line-height: 1.8; }
+  .hero-badges { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; }
+  .hero-badge { background: rgba(255,255,255,0.12); color: rgba(255,255,255,0.88); font-size: 12px; padding: 4px 12px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.18); }
+
+  .nav-wrap {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(250,249,247,0.96); backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav { max-width: 900px; margin: 0 auto; display: flex; overflow-x: auto; scrollbar-width: none; padding: 0 1rem; }
+  nav::-webkit-scrollbar { display: none; }
+  .nav-btn {
+    background: none; border: none; border-bottom: 2px solid transparent;
+    padding: 1rem 1.1rem; font-size: 13.5px; font-family: 'DM Sans', sans-serif;
+    cursor: pointer; color: var(--text-muted); white-space: nowrap;
+    transition: color 0.2s, border-color 0.2s; font-weight: 400;
+  }
+  .nav-btn:hover { color: var(--text); }
+  .nav-btn.active { color: var(--purple); border-bottom-color: var(--purple); font-weight: 500; }
+
+  main { max-width: 860px; margin: 0 auto; padding: 3rem 1.5rem 5rem; }
+  .section { display: none; animation: fadeIn 0.3s ease; }
+  .section.active { display: block; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  .section-label { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--purple); font-weight: 500; margin-bottom: 0.5rem; }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(22px, 4vw, 30px); font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3; }
+  .section-sub { color: var(--text-muted); font-size: 15px; margin-bottom: 2.5rem; max-width: 600px; line-height: 1.8; }
+
+  .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 2rem; }
+  .stat-card { background: var(--white); border: 1px solid var(--border); border-radius: 12px; padding: 1.25rem; text-align: center; box-shadow: var(--card-shadow); }
+  .stat-num { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: var(--purple); }
+  .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+  .card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; padding: 1.5rem; margin-bottom: 1rem; box-shadow: var(--card-shadow); }
+  .card-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 0.75rem; }
+  .card-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0; }
+  .card-title { font-size: 16px; font-weight: 500; line-height: 1.4; padding-top: 4px; }
+  .card p { font-size: 14px; line-height: 1.85; color: var(--text-muted); }
+  .card p + p { margin-top: 0.75rem; }
+
+  .pullquote { border-left: 3px solid var(--purple); background: var(--purple-light); padding: 1.25rem 1.5rem; margin: 1.5rem 0; border-radius: 0 10px 10px 0; }
+  .pullquote p { font-family: 'Playfair Display', serif; font-size: 15px; color: #3C3489; line-height: 1.85; font-style: italic; }
+
+  .info-box { border-radius: 12px; padding: 1.25rem 1.5rem; margin: 1rem 0; font-size: 14px; line-height: 1.8; }
+  .info-box.purple { background: var(--purple-light); color: #3C3489; border: 1px solid #CCC9F3; }
+  .info-box.teal { background: var(--teal-light); color: #085041; border: 1px solid #9FE1CB; }
+  .info-box.amber { background: var(--amber-light); color: #633806; border: 1px solid #FAC775; }
+  .info-box.coral { background: var(--coral-light); color: #712B13; border: 1px solid #F5C4B3; }
+  .info-box strong { font-weight: 500; }
+
+  .acc { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 0.75rem; background: var(--white); box-shadow: var(--card-shadow); }
+  .acc-head { padding: 1.1rem 1.25rem; cursor: pointer; font-size: 14px; font-weight: 500; display: flex; justify-content: space-between; align-items: center; user-select: none; transition: background 0.15s; gap: 12px; }
+  .acc-head:hover { background: var(--bg); }
+  .acc-left { display: flex; align-items: center; gap: 10px; }
+  .acc-icon { font-size: 18px; flex-shrink: 0; }
+  .acc-arrow { font-size: 11px; color: var(--text-faint); transition: transform 0.25s; flex-shrink: 0; }
+  .acc-arrow.open { transform: rotate(180deg); }
+  .acc-body { display: none; padding: 1.1rem 1.25rem 1.25rem; font-size: 14px; line-height: 1.85; color: var(--text-muted); border-top: 1px solid var(--border); background: #fcfcfc; }
+  .acc-body.open { display: block; }
+  .acc-body p + p { margin-top: 0.65rem; }
+
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1rem 0; }
+  @media (max-width: 580px) { .two-col { grid-template-columns: 1fr; } }
+
+  .mini-card { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 1rem; font-size: 13px; line-height: 1.7; color: var(--text-muted); }
+  .mini-card strong { display: block; font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+
+  .timeline { padding-left: 1.75rem; position: relative; }
+  .timeline::before { content:''; position:absolute; left:6px; top:0; bottom:0; width:1.5px; background:var(--purple-mid); }
+  .tl-item { position: relative; margin-bottom: 1.75rem; }
+  .tl-dot { position:absolute; left:-1.75rem; top:4px; width:13px; height:13px; border-radius:50%; background:var(--purple); border:2.5px solid var(--bg); outline:2px solid var(--purple); }
+  .tl-head { font-size:15px; font-weight:500; margin-bottom:6px; }
+  .tl-body { font-size:14px; color:var(--text-muted); line-height:1.85; }
+  .tl-body p + p { margin-top: 0.5rem; }
+
+  .sol-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-bottom: 1.5rem; }
+  .sol-card { border-radius: 14px; padding: 1.5rem; box-shadow: var(--card-shadow); }
+  .sol-card.purple { background: var(--purple-light); border: 1px solid #CCC9F3; }
+  .sol-card.teal { background: var(--teal-light); border: 1px solid #9FE1CB; }
+  .sol-card.amber { background: var(--amber-light); border: 1px solid #FAC775; }
+  .sol-label { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 500; margin-bottom: 0.5rem; }
+  .sol-card.purple .sol-label { color: var(--purple); }
+  .sol-card.teal .sol-label { color: #0F6E56; }
+  .sol-card.amber .sol-label { color: var(--amber); }
+  .sol-head { font-size: 15px; font-weight: 500; margin-bottom: 0.5rem; }
+  .sol-card.purple .sol-head { color: #3C3489; }
+  .sol-card.teal .sol-head { color: #085041; }
+  .sol-card.amber .sol-head { color: #633806; }
+  .sol-body { font-size: 13px; line-height: 1.75; }
+  .sol-card.purple .sol-body { color: #534AB7; }
+  .sol-card.teal .sol-body { color: #0F6E56; }
+  .sol-card.amber .sol-body { color: var(--amber); }
+
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 0.75rem; }
+  .tag { font-size: 12px; padding: 3px 10px; border-radius: 20px; }
+  .tag-p { background: var(--purple-light); color: #3C3489; }
+  .tag-t { background: var(--teal-light); color: #085041; }
+  .tag-a { background: var(--amber-light); color: #633806; }
+
+  .author-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 0.75rem; }
+  .author-chip { display: flex; align-items: center; gap: 8px; background: var(--white); border: 1px solid var(--border); border-radius: 30px; padding: 6px 14px 6px 6px; box-shadow: var(--card-shadow); }
+  .author-av { width: 28px; height: 28px; border-radius: 50%; background: var(--purple); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 500; flex-shrink: 0; }
+  .author-av.teal { background: var(--teal); }
+  .author-name { font-size: 13px; font-weight: 500; }
+
+  /* QUIZ */
+  .quiz-progress-bar { height: 4px; background: var(--border); border-radius: 4px; margin-bottom: 2rem; overflow: hidden; }
+  .quiz-progress-fill { height: 100%; background: var(--purple); border-radius: 4px; transition: width 0.4s ease; }
+  .quiz-counter { font-size: 12px; color: var(--text-faint); margin-bottom: 0.5rem; }
+  .quiz-q { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; line-height: 1.4; margin-bottom: 1.5rem; color: var(--text); }
+  .quiz-options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 1.5rem; }
+  .quiz-opt {
+    background: var(--white); border: 1.5px solid var(--border);
+    border-radius: 10px; padding: 1rem 1.25rem;
+    font-size: 14px; line-height: 1.6; cursor: pointer;
+    text-align: left; font-family: 'DM Sans', sans-serif;
+    transition: border-color 0.15s, background 0.15s; color: var(--text);
+  }
+  .quiz-opt:hover:not(:disabled) { border-color: var(--purple); background: var(--purple-light); }
+  .quiz-opt.correct { border-color: var(--teal); background: var(--teal-light); color: #085041; }
+  .quiz-opt.wrong { border-color: var(--coral); background: var(--coral-light); color: #712B13; }
+  .quiz-opt:disabled { cursor: default; }
+  .quiz-feedback { font-size: 14px; line-height: 1.75; padding: 1rem 1.25rem; border-radius: 10px; margin-bottom: 1.25rem; }
+  .quiz-feedback.correct { background: var(--teal-light); color: #085041; border: 1px solid #9FE1CB; }
+  .quiz-feedback.wrong { background: var(--coral-light); color: #712B13; border: 1px solid #F5C4B3; }
+  .quiz-feedback strong { font-weight: 500; }
+  .quiz-next {
+    background: var(--purple); color: #fff; border: none;
+    border-radius: 8px; padding: 10px 24px; font-size: 14px;
+    font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; transition: opacity 0.15s;
+  }
+  .quiz-next:hover { opacity: 0.9; }
+  .quiz-result { text-align: center; padding: 2rem 1rem; }
+  .quiz-score-big { font-family: 'Playfair Display', serif; font-size: 64px; font-weight: 700; color: var(--purple); line-height: 1; }
+  .quiz-score-label { font-size: 14px; color: var(--text-muted); margin: 0.5rem 0 1.5rem; }
+  .quiz-result-msg { font-size: 15px; line-height: 1.8; color: var(--text-muted); max-width: 480px; margin: 0 auto 1.5rem; }
+  .quiz-restart { background: var(--purple); color: #fff; border: none; border-radius: 8px; padding: 12px 28px; font-size: 14px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; }
+  .quiz-restart:hover { opacity: 0.9; }
+
+  .share-box { background: var(--purple); border-radius: 16px; padding: 2rem; text-align: center; margin-top: 2.5rem; position: relative; overflow: hidden; }
+  .share-box::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 80% 20%, rgba(255,255,255,0.1) 0%, transparent 60%); }
+  .share-box h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: #fff; margin-bottom: 0.5rem; position: relative; }
+  .share-box p { font-size: 14px; color: rgba(255,255,255,0.75); margin-bottom: 1.25rem; position: relative; }
+  .share-btns { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; position: relative; }
+  .btn { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; border-radius: 8px; font-size: 14px; font-family: 'DM Sans', sans-serif; cursor: pointer; font-weight: 500; border: none; transition: all 0.15s; }
+  .btn-white { background: #fff; color: var(--purple); }
+  .btn-white:hover { background: #f0efff; }
+  .btn-outline { background: rgba(255,255,255,0.15); color: #fff; border: 1px solid rgba(255,255,255,0.3); }
+  .btn-outline:hover { background: rgba(255,255,255,0.25); }
+
+  footer { background: #1a1a2e; color: rgba(255,255,255,0.6); text-align: center; padding: 2.5rem 1.5rem; font-size: 13px; line-height: 2; }
+  footer strong { color: rgba(255,255,255,0.88); font-weight: 500; }
+
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px); background: #1a1a1a; color: #fff; padding: 10px 20px; border-radius: 8px; font-size: 13px; opacity: 0; transition: all 0.3s; z-index: 9999; pointer-events: none; }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  @media (max-width: 600px) {
+    .stat-row { gap: 10px; }
+    .stat-num { font-size: 28px; }
+    main { padding: 2rem 1rem 4rem; }
+  }
+
+  /* VISUAL BACKGROUNDS */
+  .section-bg {
+    position: relative;
+    overflow: hidden;
+  }
+  .section-bg .bg-svg {
+    position: absolute;
+    top: 0; right: 0;
+    width: 320px;
+    opacity: 0.055;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .section-bg .bg-svg-bottom {
+    position: absolute;
+    bottom: 0; left: -40px;
+    width: 260px;
+    opacity: 0.045;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .section-bg > *:not(.bg-svg):not(.bg-svg-bottom) {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* HERO SVG figures */
+  .hero-figures {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .hero-figures svg {
+    position: absolute;
+    opacity: 0.12;
+  }
+
+  /* SECTION BANNER — colored strip with illustration */
+  .section-banner {
+    border-radius: 14px;
+    padding: 1.75rem 1.5rem 1.75rem 1.5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .section-banner.purple { background: var(--purple-light); border: 1px solid #CCC9F3; }
+  .section-banner.coral  { background: var(--coral-light);  border: 1px solid #F5C4B3; }
+  .section-banner.teal   { background: var(--teal-light);   border: 1px solid #9FE1CB; }
+  .section-banner.amber  { background: var(--amber-light);  border: 1px solid #FAC775; }
+  .section-banner svg { flex-shrink: 0; }
+  .section-banner-text h3 { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+  .section-banner.purple .section-banner-text h3 { color: #3C3489; }
+  .section-banner.coral  .section-banner-text h3 { color: #712B13; }
+  .section-banner.teal   .section-banner-text h3 { color: #085041; }
+  .section-banner.amber  .section-banner-text h3 { color: #633806; }
+  .section-banner-text p { font-size: 13px; line-height: 1.6; }
+  .section-banner.purple .section-banner-text p { color: #534AB7; }
+  .section-banner.coral  .section-banner-text p { color: #993C1D; }
+  .section-banner.teal   .section-banner-text p { color: #0F6E56; }
+  .section-banner.amber  .section-banner-text p { color: var(--amber); }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <!-- Hero background figures: family holding hands, heart, accessibility symbol -->
+  <div class="hero-figures">
+    <!-- Large family group left -->
+    <svg width="340" height="320" style="left:-40px;bottom:-20px;" viewBox="0 0 340 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- adult 1 -->
+      <circle cx="60" cy="60" r="22" fill="white"/>
+      <rect x="38" y="88" width="44" height="80" rx="10" fill="white"/>
+      <rect x="30" y="92" width="16" height="55" rx="8" fill="white"/>
+      <rect x="76" y="92" width="16" height="55" rx="8" fill="white"/>
+      <rect x="38" y="155" width="18" height="65" rx="9" fill="white"/>
+      <rect x="62" y="155" width="18" height="65" rx="9" fill="white"/>
+      <!-- adult 2 -->
+      <circle cx="130" cy="55" r="24" fill="white"/>
+      <rect x="106" y="85" width="48" height="85" rx="11" fill="white"/>
+      <rect x="96" y="89" width="17" height="58" rx="8" fill="white"/>
+      <rect x="147" y="89" width="17" height="58" rx="8" fill="white"/>
+      <rect x="106" y="158" width="20" height="68" rx="10" fill="white"/>
+      <rect x="132" y="158" width="20" height="68" rx="10" fill="white"/>
+      <!-- child -->
+      <circle cx="190" cy="80" r="16" fill="white"/>
+      <rect x="174" y="102" width="32" height="58" rx="9" fill="white"/>
+      <rect x="166" y="106" width="13" height="40" rx="6" fill="white"/>
+      <rect x="201" y="106" width="13" height="40" rx="6" fill="white"/>
+      <rect x="174" y="148" width="13" height="50" rx="7" fill="white"/>
+      <rect x="192" y="148" width="13" height="50" rx="7" fill="white"/>
+      <!-- heart above family -->
+      <path d="M230 30 C230 20 220 12 210 20 C200 12 190 20 190 30 C190 42 210 58 210 58 C210 58 230 42 230 30Z" fill="white"/>
+      <!-- connecting hands lines -->
+      <line x1="82" y1="120" x2="106" y2="118" stroke="white" stroke-width="6" stroke-linecap="round"/>
+      <line x1="155" y1="118" x2="174" y2="115" stroke="white" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+    <!-- Accessibility symbol right -->
+    <svg width="180" height="200" style="right:20px;top:30px;" viewBox="0 0 180 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="90" cy="30" r="22" fill="white"/>
+      <line x1="90" y1="52" x2="90" y2="120" stroke="white" stroke-width="14" stroke-linecap="round"/>
+      <line x1="40" y1="80" x2="140" y2="80" stroke="white" stroke-width="14" stroke-linecap="round"/>
+      <line x1="90" y1="120" x2="50" y2="180" stroke="white" stroke-width="12" stroke-linecap="round"/>
+      <line x1="90" y1="120" x2="130" y2="180" stroke="white" stroke-width="12" stroke-linecap="round"/>
+    </svg>
+    <!-- Floating circles decorative -->
+    <svg width="120" height="120" style="right:220px;top:10px;" viewBox="0 0 120 120" fill="none">
+      <circle cx="60" cy="60" r="50" stroke="white" stroke-width="3" fill="none"/>
+      <circle cx="60" cy="60" r="30" stroke="white" stroke-width="2" fill="none" opacity="0.5"/>
+    </svg>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-tag">Artikel Ilmiah · Pendidikan Khusus · UPI 2026</div>
+    <h1>Peran Keluarga dalam Menghadapi Diskriminasi terhadap Penyandang Disabilitas Intelektual</h1>
+    <p>Ketika sistem masih penuh celah, keluarga menjadi garda terdepan. Artikel ini membahas mengapa dukungan keluarga sangat krusial bagi penyandang disabilitas intelektual.</p>
+    <div class="hero-badges">
+      <span class="hero-badge">📚 22 Sumber Ilmiah</span>
+      <span class="hero-badge">🎓 Universitas Pendidikan Indonesia</span>
+      <span class="hero-badge">♿ Disabilitas Intelektual</span>
+    </div>
+  </div>
+</div>
+
+<div class="nav-wrap">
+  <nav>
+    <button class="nav-btn active" onclick="showSection('ringkasan', this)">Ringkasan</button>
+    <button class="nav-btn" onclick="showSection('masalah', this)">Masalah</button>
+    <button class="nav-btn" onclick="showSection('peran', this)">Peran Keluarga</button>
+    <button class="nav-btn" onclick="showSection('solusi', this)">Solusi</button>
+    <button class="nav-btn" onclick="showSection('riset', this)">Tentang Riset</button>
+    <button class="nav-btn" onclick="showSection('kuis', this)">🧠 Kuis</button>
+  </nav>
+</div>
+
+<main>
+
+  <!-- RINGKASAN -->
+  <div id="ringkasan" class="section active section-bg">
+    <!-- background watermark: open book + lightbulb -->
+    <svg class="bg-svg" viewBox="0 0 300 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20 200 C20 200 20 80 150 60 C280 80 280 200 280 200" stroke="#534AB7" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <line x1="150" y1="60" x2="150" y2="200" stroke="#534AB7" stroke-width="6" stroke-linecap="round"/>
+      <path d="M40 120 C40 120 80 100 150 95" stroke="#534AB7" stroke-width="4" fill="none" stroke-dasharray="8 6"/>
+      <path d="M260 120 C260 120 220 100 150 95" stroke="#534AB7" stroke-width="4" fill="none" stroke-dasharray="8 6"/>
+      <!-- bulb -->
+      <circle cx="150" cy="28" r="22" stroke="#534AB7" stroke-width="5" fill="none"/>
+      <line x1="140" y1="48" x2="160" y2="48" stroke="#534AB7" stroke-width="5" stroke-linecap="round"/>
+      <line x1="142" y1="55" x2="158" y2="55" stroke="#534AB7" stroke-width="4" stroke-linecap="round"/>
+      <line x1="150" y1="6" x2="150" y2="0" stroke="#534AB7" stroke-width="4" stroke-linecap="round"/>
+      <line x1="170" y1="14" x2="175" y2="10" stroke="#534AB7" stroke-width="4" stroke-linecap="round"/>
+      <line x1="130" y1="14" x2="125" y2="10" stroke="#534AB7" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+    <svg class="bg-svg-bottom" viewBox="0 0 220 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="110" cy="100" r="80" stroke="#1D9E75" stroke-width="5" fill="none"/>
+      <circle cx="110" cy="100" r="50" stroke="#1D9E75" stroke-width="3" fill="none"/>
+      <circle cx="110" cy="100" r="20" fill="#1D9E75" opacity="0.3"/>
+    </svg>
+
+    <div class="section-label">Gambaran Umum</div>
+    <h2 class="section-title">Apa inti dari penelitian ini?</h2>
+    <p class="section-sub">Penelitian ini mengkaji bagaimana keluarga berperan sebagai pilar utama bagi penyandang disabilitas intelektual, di tengah masih maraknya diskriminasi sosial dan ketimpangan kebijakan publik di Indonesia.</p>
+
+    <div class="stat-row">
+      <div class="stat-card"><div class="stat-num">22</div><div class="stat-label">sumber ilmiah dikaji</div></div>
+      <div class="stat-card"><div class="stat-num">5</div><div class="stat-label">topik utama dibahas</div></div>
+      <div class="stat-card"><div class="stat-num">4</div><div class="stat-label">bidang ilmu digabungkan</div></div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon" style="background:#EEEDFE;">💡</div>
+        <div class="card-title">Apa itu disabilitas intelektual?</div>
+      </div>
+      <p>Disabilitas intelektual adalah kondisi di mana seseorang mengalami keterbatasan dalam fungsi intelektual — seperti kemampuan belajar, memecahkan masalah, dan berpikir abstrak — serta dalam kemampuan adaptasi sehari-hari, misalnya berkomunikasi, merawat diri, atau mengelola rutinitas.</p>
+      <p>Kondisi ini bukan penyakit yang bisa "disembuhkan". Ia adalah bagian dari cara seseorang memproses dunia. Yang penting dipahami: keterbatasan intelektual tidak sama dengan tidak punya nilai, tidak punya hak, atau tidak mampu menjalani kehidupan yang bermakna.</p>
+    </div>
+
+    <div class="two-col">
+      <div class="mini-card">
+        <strong>Contoh kondisi yang termasuk</strong>
+        Sindrom Down, gangguan spektrum intelektual akibat cedera otak, kondisi bawaan lahir tertentu, dan kondisi lain yang memengaruhi perkembangan kognitif sejak masa perkembangan.
+      </div>
+      <div class="mini-card">
+        <strong>Yang sering disalahpahami</strong>
+        Penyandang disabilitas intelektual bukan "tidak cerdas" secara total. Mereka bisa belajar, berkembang, dan hidup mandiri — dengan dukungan yang tepat dan lingkungan yang inklusif.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon" style="background:#E1F5EE;">🏠</div>
+        <div class="card-title">Mengapa peran keluarga sangat penting?</div>
+      </div>
+      <p>Keluarga adalah sistem pendukung pertama dan paling konsisten yang dimiliki penyandang disabilitas intelektual. Saat institusi negara dan masyarakat masih banyak yang gagal memenuhi hak mereka, keluargalah yang menutup celah itu setiap harinya.</p>
+      <p>Penelitian yang dikaji membuktikan: ada korelasi signifikan antara kualitas dukungan keluarga dengan kemampuan dan kemandirian penyandang disabilitas intelektual. Sederhananya — keluarga yang kuat berarti penyandang disabilitas yang lebih berdaya.</p>
+    </div>
+
+    <div class="pullquote">
+      <p>"Dukungan keluarga adalah fondasi utama untuk menciptakan lingkungan yang inklusif dan kondusif, sekaligus menjadi jembatan dalam pemenuhan hak-hak penyandang disabilitas intelektual di tengah keterbatasan kebijakan yang ada."</p>
+    </div>
+
+    <div class="info-box teal">
+      <strong>Lima pokok bahasan artikel ini:</strong><br>
+      (1) Diskriminasi sosial yang dihadapi — (2) Ketimpangan kebijakan publik — (3) Peran keluarga sebagai pilar utama — (4) Hambatan keluarga dalam menjalankan perannya — (5) Rekomendasi kebijakan yang responsif dan berbasis keluarga.
+    </div>
+  </div>
+
+  <!-- MASALAH -->
+  <div id="masalah" class="section section-bg">
+    <!-- background: broken chain / barrier symbol -->
+    <svg class="bg-svg" viewBox="0 0 300 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- chain links -->
+      <rect x="60" y="30" width="50" height="30" rx="15" stroke="#D85A30" stroke-width="6" fill="none"/>
+      <rect x="90" y="50" width="50" height="30" rx="15" stroke="#D85A30" stroke-width="6" fill="none"/>
+      <rect x="120" y="30" width="50" height="30" rx="15" stroke="#D85A30" stroke-width="6" fill="none"/>
+      <!-- broken link -->
+      <path d="M155 90 L145 120" stroke="#D85A30" stroke-width="6" stroke-linecap="round"/>
+      <path d="M165 100 L175 130" stroke="#D85A30" stroke-width="6" stroke-linecap="round"/>
+      <!-- barrier bars -->
+      <line x1="40" y1="160" x2="260" y2="160" stroke="#D85A30" stroke-width="8" stroke-linecap="round"/>
+      <line x1="70" y1="160" x2="50" y2="210" stroke="#D85A30" stroke-width="6" stroke-linecap="round"/>
+      <line x1="120" y1="160" x2="100" y2="210" stroke="#D85A30" stroke-width="6" stroke-linecap="round"/>
+      <line x1="170" y1="160" x2="150" y2="210" stroke="#D85A30" stroke-width="6" stroke-linecap="round"/>
+      <line x1="220" y1="160" x2="200" y2="210" stroke="#D85A30" stroke-width="6" stroke-linecap="round"/>
+      <!-- warning triangle -->
+      <path d="M220 60 L260 130 L180 130 Z" stroke="#D85A30" stroke-width="6" fill="none" stroke-linejoin="round"/>
+      <line x1="220" y1="80" x2="220" y2="108" stroke="#D85A30" stroke-width="6" stroke-linecap="round"/>
+      <circle cx="220" cy="120" r="4" fill="#D85A30"/>
+    </svg>
+    <svg class="bg-svg-bottom" viewBox="0 0 240 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- speech bubble with X -->
+      <path d="M20 20 Q20 10 30 10 L190 10 Q200 10 200 20 L200 100 Q200 110 190 110 L120 110 L100 140 L100 110 L30 110 Q20 110 20 100 Z" stroke="#D85A30" stroke-width="5" fill="none"/>
+      <line x1="80" y1="40" x2="120" y2="80" stroke="#D85A30" stroke-width="6" stroke-linecap="round"/>
+      <line x1="120" y1="40" x2="80" y2="80" stroke="#D85A30" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Illustrated banner -->
+    <div class="section-banner coral" style="margin-bottom:1.5rem">
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- person being excluded -->
+        <circle cx="22" cy="18" r="10" fill="#D85A30" opacity="0.8"/>
+        <path d="M10 50 Q10 36 22 36 Q34 36 34 50 L34 58 L10 58 Z" fill="#D85A30" opacity="0.8"/>
+        <!-- barrier -->
+        <line x1="40" y1="22" x2="66" y2="22" stroke="#993C1D" stroke-width="5" stroke-linecap="round"/>
+        <line x1="44" y1="22" x2="38" y2="38" stroke="#993C1D" stroke-width="4" stroke-linecap="round"/>
+        <line x1="56" y1="22" x2="50" y2="38" stroke="#993C1D" stroke-width="4" stroke-linecap="round"/>
+        <!-- label tag with X -->
+        <rect x="42" y="42" width="24" height="16" rx="4" fill="#D85A30" opacity="0.7"/>
+        <line x1="48" y1="46" x2="60" y2="54" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="60" y1="46" x2="48" y2="54" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <div class="section-banner-text">
+        <h3>Diskriminasi adalah masalah sistemik</h3>
+        <p>Pelabelan negatif, celah hukum, dan beban ekonomi membentuk lingkaran setan yang sulit diputus tanpa dukungan dari semua pihak.</p>
+      </div>
+    </div>
+
+    <div class="section-label">Tantangan Nyata</div>
+    <h2 class="section-title">Masalah yang masih dihadapi</h2>
+    <p class="section-sub">Diskriminasi, celah hukum, dan tekanan ekonomi — ini bukan cerita fiksi. Ini kenyataan sehari-hari yang dihadapi penyandang disabilitas intelektual dan keluarganya di Indonesia.</p>
+
+    <div class="acc">
+      <div class="acc-head" onclick="toggleAcc(this)">
+        <div class="acc-left"><span class="acc-icon">🏷️</span><span>Stigma dan pelabelan negatif dari masyarakat</span></div>
+        <span class="acc-arrow">▼</span>
+      </div>
+      <div class="acc-body">
+        <p>Penelitian oleh Nursholichah dkk. (2024) menemukan bahwa masyarakat masih sering mendevaluasi eksistensi penyandang disabilitas intelektual melalui pelabelan negatif seperti "kurang akal", "tidak berguna", atau dianggap "membebani". Label ini bukan sekadar kata-kata — dampaknya nyata secara psikologis dan sosial.</p>
+        <p>Stigma ini menciptakan lingkaran setan: penyandang disabilitas intelektual dikucilkan → mereka semakin sulit membangun kepercayaan diri → semakin sedikit kesempatan yang mereka dapatkan → stigma semakin mengakar di masyarakat.</p>
+        <p>Yang lebih mengkhawatirkan: stigma ini tidak hanya menimpa penyandang disabilitas, tapi juga keluarganya. Orang tua dan saudara kandung sering ikut merasakan pengucilan dan kehilangan kepercayaan diri akibat pandangan negatif lingkungan sekitar.</p>
+      </div>
+    </div>
+
+    <div class="acc">
+      <div class="acc-head" onclick="toggleAcc(this)">
+        <div class="acc-left"><span class="acc-icon">⚖️</span><span>Perlindungan hukum yang belum memadai</span></div>
+        <span class="acc-arrow">▼</span>
+      </div>
+      <div class="acc-body">
+        <p>Irawan (2023) menjelaskan bahwa proses peradilan pidana untuk penyandang disabilitas intelektual masih menggunakan KUHP dan KUHAP yang bersifat umum — tanpa akomodasi khusus untuk kebutuhan mereka. Ini berarti saat seorang penyandang disabilitas intelektual menjadi korban kejahatan, saksi, atau tersangka, mereka dihadapkan pada sistem yang tidak dirancang untuk memahami cara mereka berkomunikasi.</p>
+        <p>Listiawati dkk. (2023) menemukan bahwa aparat penegak hukum kerap tidak dibekali prosedur khusus, sehingga sering terjadi miskomunikasi yang merugikan posisi hukum penyandang disabilitas intelektual. Mereka dianggap "tidak cakap hukum" karena jawaban mereka yang berubah-ubah — padahal itu adalah bagian dari cara kognitif mereka memproses informasi, bukan indikasi kebohongan.</p>
+        <div class="info-box coral" style="margin-top:0.75rem">
+          <strong>Prinsip yang dilanggar:</strong> Equality Before the Law (kesetaraan di hadapan hukum) yang seharusnya berlaku untuk semua orang tanpa terkecuali — termasuk penyandang disabilitas intelektual.
+        </div>
+      </div>
+    </div>
+
+    <div class="acc">
+      <div class="acc-head" onclick="toggleAcc(this)">
+        <div class="acc-left"><span class="acc-icon">📋</span><span>Kebijakan pemerintah yang belum merata</span></div>
+        <span class="acc-arrow">▼</span>
+      </div>
+      <div class="acc-body">
+        <p>Ada jurang besar antara regulasi yang tertulis dan kenyataan di lapangan. Alfarizi (2024) mencatat bahwa kurangnya dukungan keluarga sering disebabkan oleh minimnya pemahaman orang tua soal hak-hak disabilitas, terbatasnya akses informasi, kurangnya sarana dan prasarana, serta kemiskinan yang membelit.</p>
+        <p>Zahra (2023) dalam penelitiannya tentang Kota Inklusi Yogyakarta menyimpulkan: meskipun banyak program telah dirancang, kesenjangan antara rencana dan realitas masih sangat signifikan. Ini adalah gambaran yang kemungkinan besar berlaku di banyak daerah lain di Indonesia.</p>
+        <p>Tanpa kebijakan yang berpihak, keluarga mengalami caregiver burden — beban pengasuhan yang berat — karena harus menanggung sendiri apa yang seharusnya menjadi tanggung jawab bersama antara negara dan masyarakat.</p>
+      </div>
+    </div>
+
+    <div class="acc">
+      <div class="acc-head" onclick="toggleAcc(this)">
+        <div class="acc-left"><span class="acc-icon">💸</span><span>Beban ekonomi yang tidak proporsional</span></div>
+        <span class="acc-arrow">▼</span>
+      </div>
+      <div class="acc-body">
+        <p>Isnaeni (2021) menemukan bahwa keluarga dengan anggota penyandang disabilitas menghadapi tekanan ekonomi yang signifikan, di mana pengeluaran sering kali melebihi pendapatan keluarga. Biaya terapi, pendidikan khusus, alat bantu, dan transportasi ke fasilitas layanan dapat sangat membebani.</p>
+        <p>Kondisi ekonomi yang tertekan ini berdampak langsung pada kualitas pengasuhan. Ketika orang tua kelelahan secara finansial, mereka punya lebih sedikit energi dan sumber daya untuk memberikan stimulasi dan dukungan emosional yang dibutuhkan.</p>
+        <p>Alshadfan dkk. (2025) menambahkan: pengasuh yang tidak mendapat dukungan eksternal cenderung mengalami beban pengasuhan yang jauh lebih tinggi — baik secara fisik maupun mental.</p>
+      </div>
+    </div>
+
+    <div class="acc">
+      <div class="acc-head" onclick="toggleAcc(this)">
+        <div class="acc-left"><span class="acc-icon">😔</span><span>Isolasi sosial dan ketakutan keluarga</span></div>
+        <span class="acc-arrow">▼</span>
+      </div>
+      <div class="acc-body">
+        <p>Anlianna dkk. (2023) menemukan bahwa banyak keluarga yang sebenarnya membutuhkan layanan konseling atau bantuan profesional, namun enggan mengaksesnya karena takut kondisi anggota keluarga mereka menjadi bahan perbincangan negatif di lingkungan sekitar.</p>
+        <p>Tsaniyah dkk. (2024) mencatat bahwa diskriminasi dari lingkungan sekitar yang terus-menerus menyebabkan menurunnya kepercayaan diri anggota keluarga dalam memenuhi dan membela hak dasar anak mereka. Rasa tidak berdaya ini membuat mereka semakin menarik diri — padahal justru saat itulah mereka paling butuh dukungan.</p>
+      </div>
+    </div>
+
+    <div class="acc">
+      <div class="acc-head" onclick="toggleAcc(this)">
+        <div class="acc-left"><span class="acc-icon">🔒</span><span>Sikap over-protective yang tanpa disadari menghambat</span></div>
+        <span class="acc-arrow">▼</span>
+      </div>
+      <div class="acc-body">
+        <p>Karena dunia luar dianggap berbahaya dan tidak ramah, banyak keluarga yang secara tidak sadar bersikap terlalu protektif — melakukan semua hal untuk penyandang disabilitas, memutus interaksi sosial mereka, atau mengambil alih semua keputusan dalam hidup mereka.</p>
+        <p>Ini adalah mekanisme pertahanan yang bisa dimaklumi — tapi justru kontraproduktif. Penyandang disabilitas intelektual membutuhkan pengalaman nyata, kegagalan yang aman, dan kesempatan untuk berlatih mandiri agar bisa berkembang. Terlalu dilindungi menghilangkan semua kesempatan berharga itu.</p>
+        <div class="info-box amber" style="margin-top:0.75rem">
+          Solusinya bukan menarik dukungan, tapi mengubah bentuknya: dari <strong>melindungi</strong> menjadi <strong>memberdayakan</strong>.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PERAN KELUARGA -->
+  <div id="peran" class="section section-bg">
+    <!-- background: hands reaching / shelter / bridge -->
+    <svg class="bg-svg" viewBox="0 0 300 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- house/shelter -->
+      <path d="M60 160 L150 70 L240 160 Z" stroke="#534AB7" stroke-width="7" fill="none" stroke-linejoin="round"/>
+      <rect x="80" y="160" width="140" height="80" stroke="#534AB7" stroke-width="6" fill="none"/>
+      <rect x="128" y="185" width="44" height="55" rx="4" stroke="#534AB7" stroke-width="5" fill="none"/>
+      <!-- figures under shelter -->
+      <circle cx="110" cy="185" r="10" stroke="#1D9E75" stroke-width="4" fill="none"/>
+      <line x1="110" y1="195" x2="110" y2="225" stroke="#1D9E75" stroke-width="4" stroke-linecap="round"/>
+      <line x1="95" y1="210" x2="125" y2="210" stroke="#1D9E75" stroke-width="4" stroke-linecap="round"/>
+      <circle cx="190" cy="185" r="10" stroke="#1D9E75" stroke-width="4" fill="none"/>
+      <line x1="190" y1="195" x2="190" y2="225" stroke="#1D9E75" stroke-width="4" stroke-linecap="round"/>
+      <line x1="175" y1="210" x2="205" y2="210" stroke="#1D9E75" stroke-width="4" stroke-linecap="round"/>
+      <!-- reaching hands -->
+      <path d="M100 250 Q100 240 110 240 L155 240 Q165 240 165 250 L165 260 Q165 268 155 268 L110 268 Q100 268 100 260 Z" stroke="#534AB7" stroke-width="4" fill="none"/>
+      <path d="M200 250 Q200 240 210 240 L245 240 Q255 240 255 250 L255 260 Q255 268 245 268 L210 268 Q200 268 200 260 Z" stroke="#534AB7" stroke-width="4" fill="none"/>
+    </svg>
+    <svg class="bg-svg-bottom" viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- bridge -->
+      <path d="M10 130 Q60 40 120 50 Q180 40 230 130" stroke="#1D9E75" stroke-width="6" fill="none"/>
+      <line x1="10" y1="130" x2="230" y2="130" stroke="#1D9E75" stroke-width="5" stroke-linecap="round"/>
+      <line x1="80" y1="80" x2="80" y2="130" stroke="#1D9E75" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 4"/>
+      <line x1="120" y1="52" x2="120" y2="130" stroke="#1D9E75" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 4"/>
+      <line x1="160" y1="80" x2="160" y2="130" stroke="#1D9E75" stroke-width="4" stroke-linecap="round" stroke-dasharray="6 4"/>
+    </svg>
+
+    <!-- Illustrated banner -->
+    <div class="section-banner teal" style="margin-bottom:1.5rem">
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- family group with heart -->
+        <circle cx="18" cy="20" r="8" fill="#1D9E75" opacity="0.85"/>
+        <path d="M8 48 Q8 38 18 38 Q28 38 28 48 L28 56 L8 56 Z" fill="#1D9E75" opacity="0.85"/>
+        <circle cx="36" cy="24" r="6" fill="#0F6E56" opacity="0.85"/>
+        <path d="M28 52 Q28 44 36 44 Q44 44 44 52 L44 56 L28 56 Z" fill="#0F6E56" opacity="0.85"/>
+        <circle cx="52" cy="20" r="8" fill="#1D9E75" opacity="0.85"/>
+        <path d="M44 48 Q44 38 52 38 Q62 38 62 48 L62 56 L44 56 Z" fill="#1D9E75" opacity="0.85"/>
+        <!-- heart above -->
+        <path d="M44 8 C44 4 40 1 36 5 C32 1 28 4 28 8 C28 13 36 20 36 20 C36 20 44 13 44 8Z" fill="#085041"/>
+      </svg>
+      <div class="section-banner-text">
+        <h3>Keluarga: garda terdepan yang tak tergantikan</h3>
+        <p>Dari pelindung pertama hingga advokat kebijakan — peran keluarga terbukti secara ilmiah membentuk kemandirian dan kesejahteraan penyandang disabilitas intelektual.</p>
+      </div>
+    </div>
+
+    <div class="section-label">Fungsi dan Dampak</div>
+    <h2 class="section-title">Apa yang bisa dilakukan keluarga?</h2>
+    <p class="section-sub">Di tengah keterbatasan sistem, keluarga tetap bisa menjadi agen perubahan yang nyata. Berikut peran-peran utama yang terbukti secara ilmiah membuat perbedaan.</p>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head">🛡️ Pelindung pertama dan advokat utama</div>
+        <div class="tl-body">
+          <p>Keluarga adalah pihak yang paling memahami penyandang disabilitas intelektual secara holistik — kebiasaan, ketakutan, kekuatan, cara komunikasi, dan ritme hariannya. Pemahaman mendalam ini menjadikan mereka pelindung yang tidak tergantikan, sekaligus advokat yang paling efektif saat berhadapan dengan institusi luar seperti sekolah, rumah sakit, atau pengadilan.</p>
+          <p>Menurut teori Co-Cultural (Aurellia dkk., 2025), keluarga penyandang disabilitas berposisi sebagai kelompok minoritas yang terus harus beradaptasi di tengah masyarakat yang dominan dan sering diskriminatif. Ini membutuhkan ketangguhan luar biasa — tapi juga menciptakan kemampuan advokasi yang unik dan berharga.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head">🌱 Mendorong kemandirian secara bertahap</div>
+        <div class="tl-body">
+          <p>Purnamasari dkk. (2022) menemukan korelasi signifikan antara intervensi pola asuh keluarga dengan peningkatan kemampuan motorik dan kemandirian penyandang disabilitas intelektual. Artinya: cara keluarga mengasuh benar-benar menentukan seberapa mandiri seseorang bisa menjadi.</p>
+          <p>Yang ideal adalah pola asuh yang mendampingi — membiarkan penyandang disabilitas mencoba sendiri, memberikan bantuan hanya saat benar-benar dibutuhkan, dan merayakan setiap kemajuan kecil. Bukan mengambil alih, bukan pula membiarkan tanpa arahan sama sekali.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head">🌉 Jembatan antara individu dan dunia luar</div>
+        <div class="tl-body">
+          <p>Keluarga berperan sebagai penyaring dan penerjemah — membantu penyandang disabilitas memahami informasi dari luar, sekaligus memastikan suara dan kebutuhan mereka tersampaikan dengan tepat kepada pihak lain.</p>
+          <p>Fungsi ini krusial, terutama dalam konteks hukum dan kesehatan, di mana salah komunikasi bisa berdampak serius. Keluarga yang memahami hak-hak disabilitas bisa secara aktif memastikan penyandang disabilitas mendapat perlakuan yang layak dan proporsional.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head">📣 Suara kolektif untuk perubahan kebijakan</div>
+        <div class="tl-body">
+          <p>Zulkenedi dkk. (2023) merekomendasikan bahwa partisipasi keluarga dalam proses perumusan kebijakan tidak hanya menghasilkan kebijakan yang lebih tepat sasaran, tapi juga membangun rasa kepemilikan yang mendorong keberhasilan implementasi.</p>
+          <p>Keluarga yang aktif di komunitas inklusif, bergabung dengan organisasi advokasi, atau sekadar berbagi pengalaman di media sosial — semuanya berkontribusi pada perubahan budaya yang lebih besar dan lebih berkelanjutan.</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-head">💆 Menjaga kesehatan mental pengasuh</div>
+        <div class="tl-body">
+          <p>Ini sering diabaikan, tapi sangat mendasar: orang tua atau pengasuh yang sehat secara mental dan emosional mampu memberikan dukungan yang jauh lebih baik dan berkelanjutan. Nuri dkk. (2025) menemukan bahwa layanan yang berpusat pada keluarga — termasuk kemudahan akses informasi dan pemenuhan kebutuhan keluarga — menciptakan rasa sejahtera dan berdaya yang signifikan.</p>
+          <p>Merawat diri sendiri bukan egois. Itu adalah investasi langsung dalam kesejahteraan anggota keluarga yang penyandang disabilitas. Orang tua yang burn out tidak bisa memberikan yang terbaik bagi anak mereka.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pullquote" style="margin-top:2rem">
+      <p>"Penyandang disabilitas intelektual adalah subjek hukum yang berdaulat. Mereka punya otoritas penuh atas hak serta suara mereka sendiri. Keluarga sebaiknya mendampingi — bukan mengambil alih."</p>
+    </div>
+
+    <div class="info-box purple">
+      <strong>Ingat prinsip ini:</strong> Dukungan terbaik adalah yang menghormati kedaulatan penyandang disabilitas. Tanya, jangan putuskan sendiri. Dampingi, jangan kendalikan. Perkuat, jangan gantikan.
+    </div>
+  </div>
+
+  <!-- SOLUSI -->
+  <div id="solusi" class="section section-bg">
+    <!-- background: growing plant / upward arrows / gears -->
+    <svg class="bg-svg" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- growing plant -->
+      <line x1="150" y1="290" x2="150" y2="140" stroke="#1D9E75" stroke-width="7" stroke-linecap="round"/>
+      <path d="M150 200 Q150 160 110 140 Q110 180 150 200Z" fill="#1D9E75" opacity="0.7"/>
+      <path d="M150 230 Q150 190 190 170 Q190 210 150 230Z" fill="#1D9E75" opacity="0.7"/>
+      <path d="M150 170 Q150 130 125 110 Q115 148 150 170Z" fill="#1D9E75" opacity="0.6"/>
+      <!-- upward arrows -->
+      <path d="M40 200 L40 100 M30 120 L40 100 L50 120" stroke="#534AB7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M240 220 L240 120 M230 140 L240 120 L250 140" stroke="#534AB7" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- small gear -->
+      <circle cx="60" cy="60" r="24" stroke="#BA7517" stroke-width="5" fill="none"/>
+      <circle cx="60" cy="60" r="10" stroke="#BA7517" stroke-width="4" fill="none"/>
+      <line x1="60" y1="30" x2="60" y2="36" stroke="#BA7517" stroke-width="5" stroke-linecap="round"/>
+      <line x1="60" y1="84" x2="60" y2="90" stroke="#BA7517" stroke-width="5" stroke-linecap="round"/>
+      <line x1="30" y1="60" x2="36" y2="60" stroke="#BA7517" stroke-width="5" stroke-linecap="round"/>
+      <line x1="84" y1="60" x2="90" y2="60" stroke="#BA7517" stroke-width="5" stroke-linecap="round"/>
+      <line x1="39" y1="39" x2="43" y2="43" stroke="#BA7517" stroke-width="5" stroke-linecap="round"/>
+      <line x1="77" y1="77" x2="81" y2="81" stroke="#BA7517" stroke-width="5" stroke-linecap="round"/>
+    </svg>
+    <svg class="bg-svg-bottom" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- handshake -->
+      <path d="M20 90 L70 60 L100 80 L140 60 L200 90" stroke="#1D9E75" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M20 90 L20 130" stroke="#1D9E75" stroke-width="6" stroke-linecap="round"/>
+      <path d="M200 90 L200 130" stroke="#1D9E75" stroke-width="6" stroke-linecap="round"/>
+    </svg>
+
+    <!-- Illustrated banner -->
+    <div class="section-banner teal" style="margin-bottom:1.5rem">
+      <svg width="72" height="72" viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- scales of justice balanced -->
+        <line x1="36" y1="8" x2="36" y2="60" stroke="#085041" stroke-width="4" stroke-linecap="round"/>
+        <line x1="12" y1="22" x2="60" y2="22" stroke="#085041" stroke-width="4" stroke-linecap="round"/>
+        <!-- left pan balanced -->
+        <path d="M12 22 Q4 38 12 44 Q20 50 28 44 Q36 38 12 22Z" stroke="#1D9E75" stroke-width="3" fill="#1D9E75" opacity="0.4"/>
+        <path d="M60 22 Q52 38 60 44 Q68 50 68 44" stroke="#1D9E75" stroke-width="3" fill="none"/>
+        <path d="M60 22 Q68 38 60 44 Q52 50 44 44 Q36 38 60 22Z" stroke="#1D9E75" stroke-width="3" fill="#1D9E75" opacity="0.4"/>
+        <!-- star/sparkle -->
+        <line x1="36" y1="2" x2="36" y2="8" stroke="#085041" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="36" cy="8" r="3" fill="#085041"/>
+        <!-- base -->
+        <line x1="24" y1="64" x2="48" y2="64" stroke="#085041" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+      <div class="section-banner-text">
+        <h3>Perubahan butuh kolaborasi tiga pihak</h3>
+        <p>Pemerintah, masyarakat, dan keluarga harus bergerak bersama. Tidak ada satu pihak yang bisa menanggung ini sendirian.</p>
+      </div>
+    </div>
+
+    <div class="section-label">Rekomendasi</div>
+    <h2 class="section-title">Apa yang perlu diubah?</h2>
+    <p class="section-sub">Perubahan dibutuhkan di tiga level sekaligus — pemerintah, masyarakat, dan keluarga. Tidak ada satu pihak yang bisa menanggung ini sendirian.</p>
+
+    <div class="sol-grid">
+      <div class="sol-card purple">
+        <div class="sol-label">Untuk Pemerintah</div>
+        <div class="sol-head">🏛️ Kebijakan yang personal dan merata</div>
+        <div class="sol-body">PP No. 39 Tahun 2020 sudah mengamanatkan penilaian personal sebagai standar layanan — tapi belum dijalankan secara optimal. Setiap penyandang disabilitas intelektual punya kebutuhan unik yang tidak bisa dilayani dengan satu kebijakan umum untuk semua.</div>
+      </div>
+      <div class="sol-card teal">
+        <div class="sol-label">Untuk Masyarakat</div>
+        <div class="sol-head">🤝 Inklusif dari dalam, bukan hanya fisik</div>
+        <div class="sol-body">Rahmawati & Putranto (2024) menekankan: kota inklusif bukan hanya soal ramp dan trotoar aksesibel — tapi transformasi sikap warga dan aparat yang mencerminkan penghormatan nyata terhadap hak-hak disabilitas intelektual.</div>
+      </div>
+      <div class="sol-card amber">
+        <div class="sol-label">Untuk Keluarga</div>
+        <div class="sol-head">📱 Literasi digital dan jejaring komunitas</div>
+        <div class="sol-body">Gunakan internet untuk mencari informasi terpercaya soal hak disabilitas. Bergabunglah dengan komunitas inklusif. Kolaborasi antara literasi digital dan penguatan komunitas mampu menciptakan ekosistem yang tangguh.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon" style="background:#EEEDFE;">📜</div>
+        <div class="card-title">Reformasi sistem hukum dan pelatihan aparat</div>
+      </div>
+      <p>Aparat penegak hukum — polisi, jaksa, hakim — perlu dilatih secara khusus tentang cara berkomunikasi dan berinteraksi dengan penyandang disabilitas intelektual. Prosedur peradilan perlu disesuaikan agar mengakomodasi cara mereka memproses dan menyampaikan informasi.</p>
+      <p>Tanpa reformasi ini, prinsip "kesetaraan di hadapan hukum" akan terus menjadi janji yang tidak terpenuhi bagi jutaan penyandang disabilitas intelektual di Indonesia.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon" style="background:#E1F5EE;">🗣️</div>
+        <div class="card-title">Libatkan keluarga dalam pembuatan kebijakan</div>
+      </div>
+      <p>Keluarga penyandang disabilitas adalah "ahli lapangan" yang paling memahami apa yang benar-benar dibutuhkan. Kebijakan yang dibuat tanpa melibatkan mereka cenderung meleset dari sasaran.</p>
+      <p>Penelitian menunjukkan bahwa partisipasi aktif keluarga dalam perumusan kebijakan menghasilkan regulasi yang lebih tepat sasaran sekaligus membangun rasa kepemilikan — sehingga implementasinya jauh lebih berhasil di lapangan.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon" style="background:#FAEEDA;">🌐</div>
+        <div class="card-title">Bangun ekosistem komunitas yang inklusif</div>
+      </div>
+      <p>Beban pendampingan yang selama ini ditanggung keluarga secara mandiri perlu dibagi bersama komunitas yang didukung negara. Ini bisa berupa: pusat sumber daya inklusif di tiap kecamatan, grup dukungan orang tua, layanan konseling terjangkau, atau platform digital yang menghubungkan keluarga dengan informasi dan sesama pengasuh.</p>
+      <p>Ketika beban dibagi, setiap pihak bisa menjalankan perannya dengan lebih baik — tanpa kelelahan yang membuat segalanya runtuh.</p>
+    </div>
+
+    <div class="share-box">
+      <h3>Bagikan informasi ini</h3>
+      <p>Semakin banyak yang tahu, semakin inklusif masyarakat kita.</p>
+      <div class="share-btns">
+        <button class="btn btn-white" onclick="copyLink()">🔗 Salin tautan</button>
+        <button class="btn btn-outline" onclick="shareWA()">💬 WhatsApp</button>
+        <button class="btn btn-outline" onclick="shareTwitter()">🐦 X / Twitter</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- RISET -->
+  <div id="riset" class="section section-bg">
+    <!-- background: magnifying glass over books / network of nodes -->
+    <svg class="bg-svg" viewBox="0 0 300 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- magnifying glass -->
+      <circle cx="130" cy="110" r="70" stroke="#534AB7" stroke-width="8" fill="none"/>
+      <circle cx="130" cy="110" r="45" stroke="#534AB7" stroke-width="4" fill="none" stroke-dasharray="10 6"/>
+      <line x1="185" y1="165" x2="250" y2="240" stroke="#534AB7" stroke-width="10" stroke-linecap="round"/>
+      <!-- document lines inside -->
+      <line x1="100" y1="90" x2="160" y2="90" stroke="#534AB7" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+      <line x1="100" y1="108" x2="155" y2="108" stroke="#534AB7" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+      <line x1="100" y1="126" x2="140" y2="126" stroke="#534AB7" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+    </svg>
+    <svg class="bg-svg-bottom" viewBox="0 0 240 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- network of nodes -->
+      <circle cx="120" cy="60" r="14" stroke="#1D9E75" stroke-width="4" fill="none"/>
+      <circle cx="50" cy="140" r="12" stroke="#1D9E75" stroke-width="4" fill="none"/>
+      <circle cx="190" cy="140" r="12" stroke="#1D9E75" stroke-width="4" fill="none"/>
+      <circle cx="120" cy="180" r="10" stroke="#1D9E75" stroke-width="3" fill="none"/>
+      <line x1="120" y1="74" x2="60" y2="130" stroke="#1D9E75" stroke-width="3" opacity="0.7"/>
+      <line x1="120" y1="74" x2="180" y2="130" stroke="#1D9E75" stroke-width="3" opacity="0.7"/>
+      <line x1="62" y1="150" x2="115" y2="172" stroke="#1D9E75" stroke-width="3" opacity="0.7"/>
+      <line x1="178" y1="150" x2="125" y2="172" stroke="#1D9E75" stroke-width="3" opacity="0.7"/>
+      <line x1="62" y1="140" x2="178" y2="140" stroke="#1D9E75" stroke-width="3" opacity="0.5" stroke-dasharray="6 5"/>
+    </svg>
+
+    <div class="section-label">Latar Belakang</div>
+    <h2 class="section-title">Tentang penelitian ini</h2>
+    <p class="section-sub">Artikel ilmiah ini merupakan hasil studi literatur yang menggabungkan kajian dari empat disiplin ilmu sekaligus untuk membangun pemahaman yang menyeluruh tentang isu disabilitas intelektual di Indonesia.</p>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon" style="background:#EEEDFE;">📚</div>
+        <div class="card-title">Metode: kajian literatur nonsistematik</div>
+      </div>
+      <p>Metode ini dipilih karena topiknya bersifat multidisiplin — menyentuh empat bidang sekaligus: pendidikan khusus, hukum dan kebijakan, psikologi, dan kesejahteraan sosial. Tidak ada satu protokol systematic review yang mampu menggabungkan keragaman metodologi dari keempat bidang ini secara bersamaan (Snyder, 2019).</p>
+      <p>Tujuan artikel ini bukan menghasilkan metaanalisis, melainkan membangun argumen konseptual yang mengintegrasikan gagasan dari berbagai penelitian menjadi satu gambaran yang kohesif dan dapat dipahami masyarakat umum.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon" style="background:#E1F5EE;">🔍</div>
+        <div class="card-title">Sumber dan pencarian literatur</div>
+      </div>
+      <p>Pencarian dilakukan melalui Google Scholar, Harzing's Publish or Perish, dan ScienceDirect. Sumber mencakup artikel nasional dan internasional (2021–2026), buku teks relevan, dan dokumen kebijakan.</p>
+      <div class="tags">
+        <span class="tag tag-p">Disabilitas intelektual</span>
+        <span class="tag tag-p">Diskriminasi disabilitas intelektual</span>
+        <span class="tag tag-t">Kebijakan publik</span>
+        <span class="tag tag-t">Peran keluarga penyandang disabilitas</span>
+        <span class="tag tag-a">Dukungan keluarga penyandang disabilitas</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon" style="background:#FAEEDA;">✍️</div>
+        <div class="card-title">Tim peneliti</div>
+      </div>
+      <p style="margin-bottom:0.75rem">Pendidikan Khusus · Fakultas Ilmu Pendidikan · Universitas Pendidikan Indonesia · 2026</p>
+      <div class="author-row">
+        <div class="author-chip"><div class="author-av">DR</div><span class="author-name">Dina Rahma</span></div>
+        <div class="author-chip"><div class="author-av">NA</div><span class="author-name">Nidaa' Al Haq</span></div>
+        <div class="author-chip"><div class="author-av">SP</div><span class="author-name">Syifa Putriana</span></div>
+        <div class="author-chip"><div class="author-av">RD</div><span class="author-name">Rizka Dania Putri</span></div>
+        <div class="author-chip"><div class="author-av teal">SH</div><span class="author-name">Siti Hamidah (pembimbing)</span></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div class="card-icon" style="background:#EEEDFE;">💡</div>
+        <div class="card-title">Kesimpulan utama</div>
+      </div>
+      <p>Peran keluarga adalah instrumen fundamental bagi pertumbuhan biologis dan psikologis penyandang disabilitas intelektual. Penyandang disabilitas adalah subjek hukum yang berdaulat — mereka berhak atas suara dan keputusan mereka sendiri. Orang tua dengan kesehatan mental yang baik adalah prasyarat fundamental untuk menciptakan iklim psikososial keluarga yang inklusif.</p>
+      <p>Peneliti merekomendasikan: manfaatkan teknologi informasi untuk mencari pengetahuan dari sumber terpercaya, dan aktif berpartisipasi dalam komunitas inklusif untuk saling mendukung dan menyuarakan hak-hak disabilitas intelektual.</p>
+    </div>
+  </div>
+
+  <!-- KUIS -->
+  <div id="kuis" class="section section-bg">
+    <!-- background: brain + pencil + checkmarks -->
+    <svg class="bg-svg" viewBox="0 0 300 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- brain outline -->
+      <path d="M150 240 C90 240 50 200 50 155 C50 130 60 115 75 105 C70 95 72 80 85 75 C82 62 90 52 105 52 C108 40 120 32 135 35 C140 28 150 25 160 28 C170 25 185 30 188 42 C200 42 210 52 207 65 C220 70 228 85 222 100 C235 110 245 128 245 155 C245 200 210 240 150 240Z" stroke="#534AB7" stroke-width="6" fill="none"/>
+      <line x1="150" y1="52" x2="150" y2="240" stroke="#534AB7" stroke-width="3" stroke-dasharray="8 6" opacity="0.5"/>
+      <path d="M105 100 Q120 120 105 140 Q90 160 110 175" stroke="#534AB7" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+      <path d="M195 100 Q180 120 195 140 Q210 160 190 175" stroke="#534AB7" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.6"/>
+    </svg>
+    <svg class="bg-svg-bottom" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- checkmarks and X -->
+      <path d="M20 60 L40 80 L80 30" stroke="#1D9E75" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M120 40 L170 90" stroke="#D85A30" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M170 40 L120 90" stroke="#D85A30" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M20 140 L40 160 L80 110" stroke="#1D9E75" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- pencil -->
+      <path d="M170 120 L200 150 L190 165 L160 135 Z" stroke="#BA7517" stroke-width="4" fill="none"/>
+      <line x1="190" y1="165" x2="184" y2="172" stroke="#BA7517" stroke-width="3" stroke-linecap="round"/>
+      <line x1="170" y1="120" x2="178" y2="112" stroke="#BA7517" stroke-width="4" stroke-linecap="round"/>
+    </svg>
+
+    <div class="section-label">Uji Pemahamanmu</div>
+    <h2 class="section-title">Kuis: Seberapa paham kamu?</h2>
+    <p class="section-sub">Jawab 8 pertanyaan berikut untuk mengukur pemahamanmu tentang isu disabilitas intelektual dan peran keluarga. Tidak ada jawaban yang memalukan — ini belajar, bukan ujian!</p>
+
+    <div class="card">
+      <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="qprogress" style="width:0%"></div></div>
+      <div id="quiz-content"></div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <strong>Peran Keluarga dalam Menghadapi Diskriminasi dan Ketidakmerataan Kebijakan terhadap Penyandang Disabilitas Intelektual</strong><br>
+  Dina Rahma · Nidaa' Al Haq · Syifa Putriana · Rizka Dania Putri · Siti Hamidah<br>
+  Pendidikan Khusus · Fakultas Ilmu Pendidikan · Universitas Pendidikan Indonesia · 2026<br><br>
+  Halaman ini dibuat untuk menyebarluaskan informasi ilmiah kepada masyarakat umum.
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+const questions = [
+  {
+    q: "Apa yang dimaksud dengan disabilitas intelektual?",
+    opts: [
+      "Kondisi di mana seseorang mengalami keterbatasan fungsi intelektual dan kemampuan adaptasi sehari-hari",
+      "Gangguan mental seperti depresi atau skizofrenia",
+      "Ketidakmampuan fisik yang membuat seseorang tidak bisa berjalan",
+      "Kondisi yang hanya muncul akibat kecelakaan atau trauma"
+    ],
+    correct: 0,
+    feedback: {
+      correct: "Tepat sekali! Disabilitas intelektual ditandai dengan keterbatasan fungsi intelektual (berpikir, belajar, memecahkan masalah) DAN kemampuan adaptasi (berkomunikasi, merawat diri, mengelola rutinitas). Ini bukan gangguan mental, dan bukan hanya kondisi fisik.",
+      wrong: "Belum tepat. Disabilitas intelektual adalah kondisi yang memengaruhi kemampuan berpikir dan adaptasi sehari-hari — bukan gangguan mental atau kondisi fisik semata. Kondisi ini bisa bawaan lahir atau terjadi sejak masa perkembangan awal."
+    }
+  },
+  {
+    q: "Mengapa penyandang disabilitas intelektual sering dianggap 'tidak cakap hukum' di pengadilan?",
+    opts: [
+      "Karena mereka memang tidak boleh bersaksi menurut undang-undang yang berlaku",
+      "Karena jawaban mereka yang bisa berubah-ubah sering dianggap tidak meyakinkan, padahal itu bagian dari cara kognitif mereka",
+      "Karena pengacara yang mendampingi mereka tidak kompeten",
+      "Karena pengadilan di Indonesia sudah memiliki prosedur yang mengecualikan mereka"
+    ],
+    correct: 1,
+    feedback: {
+      correct: "Benar! Kesaksian yang tidak konsisten sering disalahartikan sebagai kebohongan, padahal itu adalah refleksi dari cara kognitif penyandang disabilitas intelektual memproses dan mengingat informasi. Sistem hukum kita belum cukup memahami dan mengakomodasi hal ini.",
+      wrong: "Belum tepat. Masalahnya bukan soal aturan atau kompetensi pengacara, melainkan cara penyandang disabilitas intelektual menjawab pertanyaan yang bisa berubah-ubah karena kondisi kognitif mereka — dan ini sering disalahartikan oleh aparat yang tidak terlatih khusus."
+    }
+  },
+  {
+    q: "Apa yang dimaksud dengan 'caregiver burden' yang dihadapi keluarga penyandang disabilitas intelektual?",
+    opts: [
+      "Kondisi di mana keluarga mendapat terlalu banyak bantuan dari pemerintah",
+      "Beban fisik, emosional, dan finansial yang dirasakan pengasuh, terutama tanpa dukungan eksternal yang memadai",
+      "Program pemerintah untuk melatih pengasuh profesional bersertifikat",
+      "Kewajiban hukum keluarga untuk mendaftarkan anggota keluarga penyandang disabilitas"
+    ],
+    correct: 1,
+    feedback: {
+      correct: "Tepat! Caregiver burden adalah beban berat yang dialami pengasuh — secara fisik, emosional, dan finansial — saat merawat penyandang disabilitas intelektual tanpa dukungan yang cukup dari luar. Penelitian menunjukkan bahwa pengasuh tanpa dukungan eksternal mengalami beban yang jauh lebih tinggi.",
+      wrong: "Belum tepat. Caregiver burden merujuk pada beban berat yang dialami pengasuh (umumnya anggota keluarga) yang merawat penyandang disabilitas — mencakup kelelahan fisik, tekanan emosional, dan kesulitan finansial, terutama saat tidak ada sistem pendukung dari negara maupun komunitas."
+    }
+  },
+  {
+    q: "Menurut penelitian yang dikaji, apa dampak positif paling signifikan dari dukungan keluarga yang baik bagi penyandang disabilitas intelektual?",
+    opts: [
+      "Penyandang disabilitas intelektual bisa sembuh total dari kondisinya",
+      "Keluarga mendapat pengurangan pajak dan tunjangan dari pemerintah",
+      "Ada korelasi signifikan antara pola asuh keluarga yang mendukung dengan peningkatan kemampuan dan kemandirian penyandang disabilitas",
+      "Penyandang disabilitas intelektual otomatis mendapat akses prioritas ke sekolah negeri"
+    ],
+    correct: 2,
+    feedback: {
+      correct: "Benar! Purnamasari dkk. (2022) menemukan korelasi signifikan: pola asuh keluarga yang mendukung berbanding lurus dengan peningkatan kemampuan (termasuk motorik) dan kemandirian penyandang disabilitas intelektual. Keluarga yang kuat berarti penyandang disabilitas yang lebih berdaya.",
+      wrong: "Belum tepat. Disabilitas intelektual bukan kondisi yang 'disembuhkan'. Yang terbukti secara ilmiah adalah: dukungan keluarga yang baik berkorelasi signifikan dengan peningkatan kemampuan dan kemandirian penyandang disabilitas intelektual — inilah kekuatan nyata peran keluarga."
+    }
+  },
+  {
+    q: "Apa yang menjadi masalah utama dari sikap 'over-protective' keluarga terhadap penyandang disabilitas intelektual?",
+    opts: [
+      "Tidak ada yang salah — semakin banyak perlindungan, semakin baik bagi penyandang disabilitas",
+      "Sikap ini menghilangkan kesempatan penyandang disabilitas untuk berlatih mandiri dan berkembang melalui pengalaman nyata",
+      "Pemerintah bisa mencabut tunjangan keluarga jika terlalu banyak melindungi",
+      "Penyandang disabilitas akan menjadi lebih agresif jika terlalu sering dilindungi orang tua"
+    ],
+    correct: 1,
+    feedback: {
+      correct: "Tepat! Meski niatnya baik dan berasal dari cinta, sikap terlalu protektif justru kontraproduktif. Penyandang disabilitas intelektual membutuhkan pengalaman nyata, kesempatan untuk mencoba dan gagal dengan aman, serta ruang untuk berlatih mandiri. Semua itu hilang jika terlalu dilindungi.",
+      wrong: "Belum tepat. Sikap over-protective, meski berasal dari kepedulian tulus, dapat menghambat tumbuh kembang penyandang disabilitas intelektual — karena mereka tidak mendapat kesempatan untuk berlatih, mencoba sendiri, dan belajar dari pengalaman nyata yang merupakan kunci kemandirian."
+    }
+  },
+  {
+    q: "Apa yang dimaksud dengan prinsip 'Equality Before the Law' dalam konteks penyandang disabilitas intelektual?",
+    opts: [
+      "Semua warga negara harus membayar pajak yang sama besarnya tanpa terkecuali",
+      "Penyandang disabilitas intelektual berhak mendapat perlakuan yang setara dan adil di hadapan hukum, termasuk akomodasi yang sesuai kebutuhannya",
+      "Hukum hanya berlaku bagi warga negara yang telah berusia dewasa dan dinyatakan cakap",
+      "Pengadilan harus selalu memenangkan pihak penyandang disabilitas dalam setiap sengketa hukum"
+    ],
+    correct: 1,
+    feedback: {
+      correct: "Tepat! Equality Before the Law berarti semua orang — termasuk penyandang disabilitas intelektual — berhak mendapat perlakuan yang setara dan adil dalam sistem hukum. Ini mencakup akomodasi khusus yang memungkinkan mereka berpartisipasi secara penuh dan bermakna dalam proses hukum.",
+      wrong: "Belum tepat. Equality Before the Law adalah prinsip bahwa semua orang berhak mendapat perlakuan yang setara dan adil di hadapan hukum — bukan berarti selalu menang, tapi mendapat proses yang benar-benar adil, termasuk akomodasi yang sesuai bagi penyandang disabilitas intelektual."
+    }
+  },
+  {
+    q: "Menurut artikel ini, apa cara yang paling efektif bagi keluarga untuk membantu penyandang disabilitas intelektual mendapatkan hak-haknya?",
+    opts: [
+      "Memindahkan penyandang disabilitas ke panti atau lembaga khusus agar ditangani tenaga profesional",
+      "Diam dan bersabar karena perubahan sistem membutuhkan waktu yang sangat lama",
+      "Aktif mencari informasi terpercaya, bergabung dengan komunitas inklusif, dan berpartisipasi dalam advokasi kebijakan",
+      "Sepenuhnya mengandalkan bantuan pemerintah dan tidak perlu berinisiatif sendiri"
+    ],
+    correct: 2,
+    feedback: {
+      correct: "Benar sekali! Artikel ini merekomendasikan kombinasi tiga hal: literasi digital (mencari info terpercaya), penguatan jejaring komunitas (bergabung dan aktif di komunitas inklusif), dan partisipasi advokasi (menyuarakan hak disabilitas dalam proses pembuatan kebijakan). Ketiganya bersinergi menciptakan ekosistem yang tangguh.",
+      wrong: "Belum tepat. Artikel ini secara eksplisit merekomendasikan agar keluarga bersikap proaktif: mencari informasi dari sumber terpercaya, bergabung dengan komunitas inklusif, dan ikut bersuara dalam proses pembuatan kebijakan. Keluarga adalah agen perubahan — bukan hanya penerima bantuan pasif."
+    }
+  },
+  {
+    q: "Mengapa kesehatan mental orang tua disebut sebagai 'prasyarat fundamental' dalam mendukung penyandang disabilitas intelektual?",
+    opts: [
+      "Karena orang tua yang memiliki masalah mental dianggap tidak berhak secara hukum untuk merawat anak",
+      "Karena orang tua dengan kesehatan mental yang baik mampu menciptakan iklim psikososial yang mendukung dan memberikan pengasuhan yang lebih berkualitas",
+      "Karena pemerintah mensyaratkan sertifikat kesehatan mental untuk mendapatkan tunjangan disabilitas",
+      "Karena kondisi disabilitas intelektual anak bisa menular kepada orang tua yang mengalami stres berat"
+    ],
+    correct: 1,
+    feedback: {
+      correct: "Tepat! Orang tua yang sehat secara mental mampu memberikan pengasuhan yang lebih stabil, empatik, dan kreatif. Mereka punya energi untuk mendampingi, kesabaran untuk memberdayakan, dan kapasitas untuk beradvokasi. Kesehatan mental orang tua adalah investasi langsung dalam kesejahteraan penyandang disabilitas yang mereka asuh.",
+      wrong: "Belum tepat. Kesehatan mental orang tua disebut prasyarat fundamental karena: orang tua yang sehat mental mampu menciptakan lingkungan psikososial yang positif, mendampingi dengan lebih efektif, dan memiliki ketangguhan untuk menghadapi tantangan jangka panjang dalam merawat penyandang disabilitas intelektual."
+    }
+  }
+];
+
+let current = 0, score = 0, answered = false;
+
+function renderQuestion() {
+  const q = questions[current];
+  document.getElementById('qprogress').style.width = ((current / questions.length) * 100) + '%';
+  document.getElementById('quiz-content').innerHTML = `
+    <div class="quiz-counter">Pertanyaan ${current + 1} dari ${questions.length}</div>
+    <div class="quiz-q">${q.q}</div>
+    <div class="quiz-options">
+      ${q.opts.map((o, i) => `<button class="quiz-opt" onclick="answer(${i})">${o}</button>`).join('')}
+    </div>
+    <div id="quiz-fb" style="display:none"></div>
+    <div id="quiz-nav" style="display:none;margin-top:0.5rem">
+      <button class="quiz-next" onclick="nextQ()">${current < questions.length - 1 ? 'Pertanyaan berikutnya →' : 'Lihat hasil kuis'}</button>
+    </div>
+  `;
+  answered = false;
+}
+
+function answer(i) {
+  if (answered) return;
+  answered = true;
+  const q = questions[current];
+  const isCorrect = i === q.correct;
+  if (isCorrect) score++;
+  document.querySelectorAll('.quiz-opt').forEach((btn, idx) => {
+    btn.disabled = true;
+    if (idx === q.correct) btn.classList.add('correct');
+    else if (idx === i && !isCorrect) btn.classList.add('wrong');
+  });
+  const fb = document.getElementById('quiz-fb');
+  fb.style.display = 'block';
+  fb.className = 'quiz-feedback ' + (isCorrect ? 'correct' : 'wrong');
+  fb.innerHTML = (isCorrect ? '<strong>✅ Benar!</strong> ' : '<strong>❌ Belum tepat.</strong> ') + (isCorrect ? q.feedback.correct : q.feedback.wrong);
+  document.getElementById('quiz-nav').style.display = 'block';
+}
+
+function nextQ() {
+  current++;
+  if (current >= questions.length) showResult();
+  else renderQuestion();
+}
+
+function showResult() {
+  document.getElementById('qprogress').style.width = '100%';
+  const pct = Math.round((score / questions.length) * 100);
+  let msg = '', emoji = '';
+  if (pct >= 88) { emoji = '🏆'; msg = 'Luar biasa! Kamu sudah memiliki pemahaman yang sangat baik tentang isu disabilitas intelektual dan peran keluarga. Bagikan pengetahuan ini ke orang-orang di sekitarmu!'; }
+  else if (pct >= 63) { emoji = '🌟'; msg = 'Bagus sekali! Kamu sudah memahami banyak hal penting. Coba baca ulang bagian yang masih belum dikuasai untuk memperdalam pemahamanmu lebih jauh.'; }
+  else if (pct >= 38) { emoji = '📚'; msg = 'Sudah ada pemahaman dasar yang baik! Isu disabilitas intelektual memang kompleks. Jangan ragu untuk membaca ulang seluruh artikel dengan lebih teliti.'; }
+  else { emoji = '🌱'; msg = 'Ini adalah awal yang baik! Setiap orang memulai dari suatu titik. Baca artikel ini dengan lebih teliti, lalu coba kuis lagi — kamu pasti bisa lebih baik!'; }
+  document.getElementById('quiz-content').innerHTML = `
+    <div class="quiz-result">
+      <div style="font-size:48px;margin-bottom:0.5rem">${emoji}</div>
+      <div class="quiz-score-big">${score}/${questions.length}</div>
+      <div class="quiz-score-label">${pct}% jawaban benar</div>
+      <div class="quiz-result-msg">${msg}</div>
+      <button class="quiz-restart" onclick="restartQuiz()">🔄 Coba lagi dari awal</button>
+    </div>
+  `;
+}
+
+function restartQuiz() {
+  current = 0; score = 0; answered = false;
+  document.getElementById('qprogress').style.width = '0%';
+  renderQuestion();
+}
+
+function showSection(id, btn) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (id === 'kuis' && current === 0 && !answered) renderQuestion();
+}
+
+function toggleAcc(head) {
+  const body = head.nextElementSibling;
+  const arrow = head.querySelector('.acc-arrow');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  arrow.classList.toggle('open', !isOpen);
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2800);
+}
+
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(() => showToast('✅ Tautan berhasil disalin!')).catch(() => showToast('Salin tautan dari address bar browser'));
+}
+
+function shareWA() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('Baca artikel penting tentang peran keluarga untuk penyandang disabilitas intelektual: ');
+  window.open('https://wa.me/?text=' + text + url, '_blank');
+}
+
+function shareTwitter() {
+  const url = encodeURIComponent(window.location.href);
+  const text = encodeURIComponent('Artikel penting: Peran Keluarga dalam Menghadapi Diskriminasi terhadap Penyandang Disabilitas Intelektual 🧡 ');
+  window.open('https://twitter.com/intent/tweet?text=' + text + url, '_blank');
+}
+</script>
+</body>
+</html>
